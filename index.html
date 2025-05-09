@@ -30,11 +30,15 @@
             font-size: 0.8rem;
             color: grey;
         }
+        .logo {
+            width: 150px; /* Adjust the size of the logo */
+            margin-bottom: 20px;
+        }
         .whatsapp-button, .youtube-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #25D366;
+            background-color: #25D366; /* WhatsApp color */
             color: white;
             border: none;
             border-radius: 50%;
@@ -45,31 +49,57 @@
             align-items: center;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             cursor: pointer;
-            font-size: 24px;
-            z-index: 1000;
             transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .youtube-button {
-            background-color: #FF0000;
-            right: 90px; /* Adjust position for YouTube button */
         }
         .whatsapp-button:hover {
             background-color: #128C7E;
             transform: translateY(-10px);
         }
+        .youtube-button {
+            right: 90px; /* Adjusted position for YouTube button */
+            background-color: #FF0000; /* YouTube color */
+        }
         .youtube-button:hover {
             background-color: #C8102E;
             transform: translateY(-10px);
+        }
+        .whatsapp-tooltip, .youtube-tooltip {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: none;
+            z-index: 1001;
+        }
+        .whatsapp-tooltip {
+            background-color: #25D366;
+        }
+        .youtube-tooltip {
+            background-color: #FF0000;
+        }
+        .whatsapp-button:hover .whatsapp-tooltip,
+        .youtube-button:hover .youtube-tooltip {
+            display: block;
+        }
+        /* Image styling for buttons */
+        .button-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="https://github.com/kenjin32icon/dogtales/blob/main/Screenshot_from_2025-04-21_17-07-39-removebg-preview.png?raw=true" alt="Dog Tales Kennel Logo" class="logo"> <!-- Replace with actual logo URL -->
         <h1>Dog Tales Kennel</h1>
     </header>
     <main>
-        <h1>We're Experiencing Technical Difficulties</h1>
-        <p>Our team is currently working hard to resolve the issues. We appreciate your patience!</p>
+        <h1>We're Currently Under Construction</h1>
+        <p>We sincerely apologize for the inconvenience. Our team is diligently working to resolve the issues and improve your experience.</p>
         <p>Estimated time for resolution: <strong>1 hour</strong></p>
         <p>If you have urgent inquiries, please contact us at:</p>
         <div class="contact-info">
@@ -80,18 +110,16 @@
     <footer>
         <p>&copy; 2025 Dog Tales Kennel. All rights reserved.</p>
     </footer>
-<a href="https://wa.me/254115411167" class="whatsapp-button" target="_blank">
-    <img src="data:image/jpeg;base64,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" alt="whatsapp">
-    <i class="fab fa-whatsapp"></i>
-    <div class="whatsapp-tooltip">WhatsApp Us</div>
-</a>
 
-<a href="https://www.youtube.com/@Mawagidoo" class="youtube-button" target="_blank">
-    <img src ="data:image/png;base64,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" alt="YouTube">
-    <i class="fab fa-youtube"></i>
-    <div class="youtube-tooltip">Follow us</div>
-</a>
+    <a href="https://wa.me/254115411167" class="whatsapp-button" target="_blank">
+        <img src="https://github.com/kenjin32icon/dogtales/blob/main/WhatsApp%20Image%202025-05-09%20at%202.07.45%20PM(1).jpeg?raw=true" alt="WhatsApp" class="button-image">
+        <div class="whatsapp-tooltip">WhatsApp Us</div>
+    </a>
 
+    <a href="https://www.youtube.com/@Mawagidoo" class="youtube-button" target="_blank">
+        <img src="https://github.com/kenjin32icon/dogtales/blob/main/Untitled.png?raw=true" alt="YouTube" class="button-image">
+        <div class="youtube-tooltip">Follow us</div>
+    </a>
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
